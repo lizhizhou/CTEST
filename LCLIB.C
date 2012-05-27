@@ -33,6 +33,11 @@ int get_token(void);
 void sntx_err(int error), eval_exp(int *result);
 void putback(void);
 
+int call_function()
+{
+
+}
+
 /* Get a character from console. (Use getchar() if
    your compiler does not support getche().) */
 int call_getche()
@@ -109,4 +114,3 @@ int getnum(void)
   prog++;  /* advance to end of line */
   return atoi(s);
 }
-

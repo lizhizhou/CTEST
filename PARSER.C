@@ -73,15 +73,16 @@ int call_getche(void), call_putch(void);
 int call_puts(void), print(void), getnum(void);
 
 struct intern_func_type {
-  char *f_name; /* function name */
-  int (* p)();  /* pointer to the function */
+  char *f_name;  /* function name */
+  char *f_param; /* function parameter */
+  int (* p)();   /* pointer to the function */
 } intern_func[] = {
-  "getche", call_getche,
-  "putch", call_putch,
-  "puts", call_puts,
-  "print", print,
-  "getnum", getnum,
-  "", 0  /* null terminate the list */
+  "getche","", call_getche,
+  "putch","", call_putch,
+  "puts","", call_puts,
+  "print","", print,
+  "getnum","", getnum,
+  "","", 0  /* null terminate the list */
 };
 
 extern char token[80]; /* string representation of token */
